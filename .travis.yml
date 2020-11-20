@@ -1,0 +1,14 @@
+#super user permissions needed
+sudo: required
+
+#install docker service
+services:
+  - docker
+
+#things to do before main tasks are done
+before_install:
+  - docker build -t damilare77/docker-react -f Dockerfile.dev .
+
+#contains all the commands that needs to execute the test suite
+script:
+  - docker run damilare77/docker-react yarn run test -- --coverage
