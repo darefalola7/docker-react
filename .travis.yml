@@ -1,5 +1,7 @@
+language: generic
+
 #super user permissions needed
-sudo: required
+sudo: true
 
 #install docker service
 services:
@@ -11,4 +13,4 @@ before_install:
 
 #contains all the commands that needs to execute the test suite
 script:
-  - docker run damilare77/docker-react yarn run test -- --coverage
+  - docker run -e CI=true damilare77/docker-react yarn run test
