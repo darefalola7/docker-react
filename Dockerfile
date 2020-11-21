@@ -14,12 +14,12 @@ COPY ./package.json ./
 
 #Download and install a dependency
 #RUN npm cache clean --force
-RUN yarn install
+RUN npm install
 
-COPY ./ ./
+COPY . .
 
 #build project
-RUN yarn run build
+RUN npm run build
 
 
 #FROM means start new phase
