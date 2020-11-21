@@ -14,7 +14,7 @@ COPY ./package.json ./
 
 #Download and install a dependency
 #RUN npm cache clean --force
-RUN npm install
+RUN npm install --force
 
 COPY . .
 
