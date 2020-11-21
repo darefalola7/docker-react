@@ -24,7 +24,7 @@ RUN yarn run build
 
 #FROM means start new phase
 FROM nginx
-
+EXPOSE 80
 #--from=builder means copy from the builder phase
 COPY --from=builder /app/build /usr/share/nginx/html
 
