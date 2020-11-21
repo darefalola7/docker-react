@@ -10,13 +10,13 @@ WORKDIR /app
 #First path is path to folder in local FS to path in container
 #first path is relative to the build context (e.g. simpleweb)
 #based on WORKDIR second ./ will be workdir directory
-COPY ./package.json .
+COPY ./package.json ./
 
 #Download and install a dependency
 #RUN npm cache clean --force
 RUN yarn install
 
-COPY . .
+COPY ./ ./
 
 #build project
 RUN yarn run build

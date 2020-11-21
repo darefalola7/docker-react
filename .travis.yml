@@ -9,7 +9,7 @@ services:
 
 #things to do before main tasks are done
 before_install:
-  - docker build -t damilare77/docker-react -f Dockerfile.dev .
+  - docker build -t damilare77/docker-react -f Dockerfile .
 
 #contains all the commands that needs to execute the test suite
 script:
