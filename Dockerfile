@@ -12,14 +12,15 @@ WORKDIR /app
 #based on WORKDIR second ./ will be workdir directory
 COPY ./package.json ./
 
+RUN npm install -g yarn
 #Download and install a dependency
 #RUN npm cache clean --force
-RUN npm install --force
+RUN yarn install
 
 COPY . .
 
 #build project
-RUN npm run build
+RUN yarn run build
 
 
 #FROM means start new phase
