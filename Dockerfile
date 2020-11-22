@@ -16,7 +16,7 @@ COPY ./package.json ./
 #RUN npm cache clean --force
 RUN yarn install
 
-COPY ./ ./
+COPY . .
 
 #build project
 RUN yarn run build
