@@ -12,7 +12,6 @@ WORKDIR /app
 #based on WORKDIR second ./ will be workdir directory
 COPY ./package.json ./
 
-RUN npm install -g yarn
 #Download and install a dependency
 #RUN npm cache clean --force
 RUN yarn install
